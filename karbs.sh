@@ -18,6 +18,7 @@ if [[ -f "$FILE" ]]; then
 else
   curl -LO https://raw.githubusercontent.com/kristoferssolo/karbs/main/pkg-files/"$size"-pkgs.txt
   paru -Syu --noconfirm --needed archlinux-keyring - < "$size"-pkgs.txt
+  rm "$size"-pkgs.txt
 fi
 
 mkdir -p ~/repos ~/Downloads ~/Documents ~/Videos ~/Music ~/Pictures/screenshots
