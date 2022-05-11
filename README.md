@@ -5,7 +5,8 @@
 On an Arch-based distribution as root, run the following:
 
 ```
-wget kristofers.pythonanywhere.com/karbs.sh
+git clone https://github.com/kristoferssolo/karbs
+cd karbs
 sh karbs.sh
 ```
 
