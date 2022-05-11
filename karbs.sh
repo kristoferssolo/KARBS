@@ -16,7 +16,7 @@ FILE=pkg-files/"$size"-pkgs.txt
 if [[ -f "$FILE" ]]; then
   paru -Syu --noconfirm --needed archlinux-keyring - < /pkg-files/"$size"-pkgs.txt
 else
-  wget https://raw.githubusercontent.com/kristoferssolo/karbs/main/pkg-files/"$size"-pkgs.txt
+  curl -LO https://raw.githubusercontent.com/kristoferssolo/karbs/main/pkg-files/"$size"-pkgs.txt
   paru -Syu --noconfirm --needed archlinux-keyring - < "$size"-pkgs.txt
 fi
 
