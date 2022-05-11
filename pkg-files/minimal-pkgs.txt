@@ -30,7 +30,6 @@ epub-thumbnailer-git
 fastfetch
 lf
 nsxiv
-picom-ibhagwan-git
 vim-plug
 spaceship-prompt
 zsh-fast-syntax-highlighting
