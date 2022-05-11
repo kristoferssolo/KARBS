@@ -12,6 +12,7 @@ exa
 feh
 ffmpegthumbnailer
 firefox
+flameshot
 imagemagick
 opendoas
 poppler
