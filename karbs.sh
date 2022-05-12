@@ -25,8 +25,9 @@ mkdir -p ~/repos ~/Downloads ~/Documents ~/Videos ~/Music ~/Pictures/screenshots
 git clone https://github.com/kristoferssolo/solorice ~/repos/solorice
 
 cp -rf ~/repos/solorice/.config ~
+rm -rf ~/.config/awesome/desktop
 cp -rf ~/repos/solorice/.local ~
-cp -f ~/repos/solorice/.cofig/zsh/.zshenv ~
+mv ~/.config/zsh/.zshenv ~
 git clone https://github.com/streetturtle/awesome-wm-widgets ~/.config/awesome/awesome-wm-widgets
 
 
