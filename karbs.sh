@@ -15,13 +15,11 @@ fi
 
 FILE = "pkg-files/$size-pkgs.txt"
 
-paru -Syu --noconfirm --needed archlinux-keyring
-
 if [[ -f "$FILE" ]]; then
-	paru -S --noconfirm --needed - <"pkg-files/$size-pkgs.txt"
+	paru -Syu --noconfirm --needed - <"pkg-files/$size-pkgs.txt"
 else
 	curl -LO "https://raw.githubusercontent.com/kristoferssolo/karbs/main/pkg-files/$size-pkgs.txt"
-	paru -S --noconfirm --needed - <"$size-pkgs.txt"
+	paru -Syu --noconfirm --needed - <"$size-pkgs.txt"
 	rm "$size"-pkgs.txt
 fi
 
