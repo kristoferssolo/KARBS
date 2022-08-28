@@ -5,8 +5,7 @@
 On an Arch-based distribution as root, run the following:
 
 ```shell
-git clone https://github.com/kristoferssolo/karbs
-cd karbs
+curl -LO kristofers.xyz/karbs.sh
 sh karbs.sh
 ```
 
