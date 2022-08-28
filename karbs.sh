@@ -30,7 +30,7 @@ cp -rf "$HOME/repos/solorice/.config" "$HOME"
 rm -rf "$HOME/.config/awesome/desktop"
 touch "$HOME/.config/awesome/weather"
 cp -rf "$HOME/repos/solorice/.local" "$HOME"
-ln -rfs "$HOME/.config/zsh/.zshenv" "$HOME"
+ln -sf "$HOME/.config/zsh/.zshenv" "$HOME"
 git clone 'https://github.com/streetturtle/awesome-wm-widgets' "$HOME/.config/awesome/awesome-wm-widgets"
 
 chsh -s /bin/zsh

@@ -12,6 +12,7 @@ adobe-source-han-serif-kr-fonts
 adobe-source-han-serif-otc-fonts
 adobe-source-han-serif-tw-fonts
 alacritty
+alsa-utils
 amd-ucode
 amdvlk
 arc-solid-gtk-theme
@@ -24,7 +25,6 @@ autoconf
 automake
 autopep8
 awesome
-baobab
 base
 bat
 beautysh
@@ -36,6 +36,7 @@ blender
 bridge-utils
 btop
 catdoc
+cef-minimal-obs-bin
 chafa
 corectrl
 cups
@@ -66,8 +67,9 @@ feh
 ferdium-bin
 ffmpegthumbnailer
 file
+filelight
 findutils
-flameshot
+flameshot-git
 flex
 fontmatrix
 ftba
@@ -81,6 +83,7 @@ gimp-nufraw
 gitg
 glow
 gnu-efi
+gnumeric
 godot
 grep
 groff
@@ -96,7 +99,6 @@ inxi
 joplin-desktop
 kdeconnect
 kdenlive
-konsole
 krita
 lf
 lftp
@@ -110,7 +112,7 @@ lm_sensors-runit
 lolcat
 lua
 luacheck
-lutris
+lutris-git
 lxappearance
 m4
 make
@@ -126,6 +128,15 @@ neovide
 neovim
 networkmanager
 networkmanager-runit
+nextcloud-app-bookmarks
+nextcloud-app-calendar
+nextcloud-app-contacts
+nextcloud-app-deck
+nextcloud-app-mail
+nextcloud-app-notes
+nextcloud-app-notify_push
+nextcloud-app-spreed
+nextcloud-app-tasks
 nextcloud-client
 nodejs-mapscii
 noto-fonts-emoji
@@ -134,7 +145,9 @@ npm
 nsxiv
 ntfs-3g
 numlockx
-obs-studio
+nvim-packer-git
+obs-studio-tytan652
+onedrive-abraunegg
 onlyoffice-bin
 openbsd-netcat
 opendoas
@@ -144,6 +157,7 @@ os-prober
 pacfinder
 pacman
 pandoc-bin
+papirus-icon-theme
 paru-bin
 patch
 perl-font-ttf
@@ -190,10 +204,10 @@ skim
 spacefm
 speedtest++
 spotify
+sshfs
 starship
 steam
 stylua-bin
-sudo
 sx
 system-config-printer
 tealdeer
@@ -241,7 +255,6 @@ virt-manager
 virt-viewer
 vivaldi
 vivaldi-ffmpeg-codecs
-vkd3d
 vscodium-bin
 vscodium-bin-features
 vscodium-bin-marketplace
@@ -249,10 +262,15 @@ vulkan-mesa-layers
 wget
 which
 whois
+wine
+wine-gecko
+wine-mono
+winetricks
 wireplumber
 xclip
 xdg-ninja
 xf86-video-amdgpu
+xlockmore
 xorg-xinit
 xorg-xinput
 xorg-xwininfo
