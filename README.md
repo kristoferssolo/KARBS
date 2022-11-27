@@ -21,7 +21,7 @@ with a fully configured diving-board for work or more customization.
 
 ## Customization
 
-By default, KARBS uses the programs from [here](pkg-files/minimal-pkgs.txt) and installs
+By default, KARBS uses the programs from [here](pkg-files/X11-pkgs) and installs
 [my dotfiles repo (solorice)](https://github.com/kristoferssolo/solorice).
 
 ## Credits

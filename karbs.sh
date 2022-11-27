@@ -3,7 +3,7 @@
 # by Kristofers Solo
 # License: GNU GPLv3
 
-echo 'Choose display server (X11 / Wayland)[1/2]: '
+echo "Choose display server (X11 / Wayland)[1/2]: "
 read -r USER_INPUT
 
 
@@ -23,7 +23,7 @@ if pacman -Q paru; then
     :
 else
     sudo pacman -S --noconfirm rust-src
-    git clone 'https://aur.archlinux.org/paru-bin'
+    git clone "https://aur.archlinux.org/paru-bin"
     cd paru-bin || exit
     makepkg -si
     cd ..
@@ -40,22 +40,23 @@ else
     rm -f "$DISPLAY_SERVER-pkgs"
 fi
 
-mkdir -p "$HOME/{repos,Downloads,Documents,Videos,Music,Pictures/screenshots}"
-git clone 'https://github.com/kristoferssolo/solorice' "$HOME/repos/solorice"
-
-cp -raf "$HOME/repos/solorice/.config" "$HOME"
-cp -raf "$HOME/repos/solorice/.local" "$HOME"
-ln -sf "$HOME/.config/zsh/.zshenv" "$HOME"
-sudo chsh -s /bin/zsh
+git clone "https://github.com/kristoferssolo/solorice" "$HOME"
+git clone "https://github.com/kristoferssolo/SoloVim" "$HOME/.config/nvim"
+rm -rf "$HOME/{LICENSE,readme.md}"
+mkdir -p "$HOME/{Downloads,Documents,Videos,Music,Pictures/screenshots}"
 
 if [ $DISPLAY_SERVER = "wayland" ]; then
     rm -rf "$HOME/.config/{awesome,picom,sx,zsh/.zprofile-X11}"
     mv "$HOME/.config/zsh/zprofile-wayland" "$HOME/.config/zsh/.zprofile"
+    chsh -s /bin/zsh
+    zsh
     Hyprland
 else
     rm -rf "$HOME/.config/{hypr,waybar,zsh/.zprofile-wayland}"
     mv "$HOME/.config/zsh/zprofile-X11" "$HOME/.config/zsh/.zprofile"
-    git clone 'https://github.com/streetturtle/awesome-wm-widgets' "$HOME/.config/awesome/awesome-wm-widgets"
+    git clone "https://github.com/streetturtle/awesome-wm-widgets" "$HOME/.config/awesome/awesome-wm-widgets"
+    chsh -s /bin/zsh
+    zsh
     echo -e "\n\n\033[1;31mFor weather widget to work, enter API-key from https://openweathermap.org, latitude and longitude in '~/.config/awesome/weather' file, each on seperate line.\033[0m"
     echo "API-key"
     echo "latitude"
