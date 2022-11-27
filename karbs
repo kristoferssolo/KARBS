@@ -22,7 +22,7 @@ fi
 if pacman -Q paru; then
     :
 else
-    sudo pacman -S --noconfirm rust-src git wget
+    sudo pacman -S --noconfirm rust-src git wget fakeroot
     git clone https://aur.archlinux.org/paru-bin
     cd paru-bin || exit
     makepkg -si
