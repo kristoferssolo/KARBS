@@ -41,7 +41,7 @@ else
 fi
 
 git clone https://github.com/kristoferssolo/solorice "$HOME/solorice"
-cp -raf "$HOME"/solorice/{./config,./local,.zshenv} "$HOME"
+cp -raf "$HOME"/solorice/{.config,.local,.zshenv} "$HOME"
 git clone https://github.com/kristoferssolo/SoloVim "$HOME"/.config/nvim
 rm -rf "$HOME"/solorice
 mkdir -p "$HOME"/{Downloads,Documents,Videos,Music,Pictures/screenshots}
