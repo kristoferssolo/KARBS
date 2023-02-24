@@ -15,9 +15,9 @@ getusername() {
 	echo "Enter user for which you want to install KARBS."
 	read -r username
 	export username
-	export homedir="$homedir"
+	export homedir="/home/$username"
 	export repodir="$homedir/repos"
-	mkdir -p "$repodir"
+	sudo -u "$username" mkdir -p "$repodir"
 }
 
 getdisplayserver() {
