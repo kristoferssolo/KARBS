@@ -12,7 +12,7 @@ error() {
 }
 
 getusername() {
-	echo "Enter user for which you want to install KARBS."
+	echo "Enter the user for whom you want to install KARBS.."
 	read -r username
 	export username
 	export homedir="/home/$username"
@@ -116,6 +116,9 @@ refreshkeys() {
 	esac
 }
 
+# Get username
+getusername || error "Wrong username."
+
 # Get user desired display server (X11 or Wayland)
 getdisplayserver || error "User error."
 
@@ -129,7 +132,7 @@ grep -q "ILoveCandy" /etc/pacman.conf || sed -i "/#VerbosePkgLists/a ILoveCandy"
 sed -i "s/-j2/-j$(nproc)/;/^#MAKEFLAGS/s/^#//" /etc/makepkg.conf
 
 # Installs AUR helper
-manualinstall paru || error "Failed to install AUR helper."
+manualinstall paru-bin || error "Failed to install AUR helper."
 
 # The command that does all the installing.
 installation || error "Error while installing."
