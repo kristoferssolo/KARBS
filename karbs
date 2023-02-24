@@ -40,15 +40,9 @@ manualinstall() {
 	pacman -S --noconfirm rust-src git wget fakeroot
 	rm -rf "${repodir:?}/$1"
 	sudo -u "$username" mkdir -p "$repodir/$1"
-	sudo -u "$username" git -C "$repodir" clone --depth 1 --single-branch \
-		--no-tags -q "https://aur.archlinux.org/$1.git" "$repodir/$1" ||
-		{
-			cd "$repodir/$1" || return 1
-			sudo -u "$username" git pull --force origin master
-		}
+	sudo -u "$username" git clone "https://aur.archlinux.org/$1.git" "$repodir/$1"
 	cd "$repodir/$1" || exit 1
-	sudo -u "$username" "$repodir/$1" \
-		makepkg --noconfirm -si >/dev/null 2>&1 || return 1
+	sudo -u "$username" "$repodir/$1"makepkg -si >/dev/null 2>&1 || return 1
 }
 
 installation() {
