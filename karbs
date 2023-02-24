@@ -18,7 +18,6 @@ getusername() {
 	export homedir="/home/$username"
 	export repodir="$homedir/repos"
 	sudo -u "$username" mkdir -p "$repodir"
-	chown -R "$username":"$username" "$homedir"
 }
 
 getdisplayserver() {
@@ -58,7 +57,7 @@ installation() {
 }
 
 getdotfiles() {
-	rm -rf "${homedir:?}/*"
+	rm -rf "$homedir/.config" "$homedir/.local" "$homedir/.zshenv" "$homedir/.xprofile"
 	sudo -u "$username" git clone "$dotfilesrepo" "$homedir"
 	rm -rf "$homedir/.git" "$homedir/README.md" "$homedir/LICENSE"
 
@@ -99,7 +98,7 @@ refreshkeys() {
 		pacman --noconfirm -S archlinux-keyring >/dev/null 2>&1
 		;;
 	*)
-		echo "Enabling Arch Repositories for more a more extensive software collection..."
+		echo "Enabling Arch Repositories for more extensive software collection..."
 		if ! grep -q "^\[universe\]" /etc/pacman.conf; then
 			printf "[universe]\nServer = https://universe.artixlinux.org/\$arch\nServer = https://mirror1.artixlinux.org/universe/\$arch\nServer = https://mirror.pascalpuffke.de/artix-universe/\$arch\nServer = https://artixlinux.qontinuum.space/artixlinux/universe/os/\$arch\nServer = https://mirror1.cl.netactuate.com/artix/universe/\$arch\nServer = https://ftp.crifo.org/artix-universe/\n" >>/etc/pacman.conf
 
