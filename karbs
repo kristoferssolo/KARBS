@@ -18,6 +18,7 @@ getusername() {
 	export homedir="/home/$username"
 	export repodir="$homedir/repos"
 	sudo -u "$username" mkdir -p "$repodir"
+	chown -R "$username":"$username" "$homedir"
 }
 
 getdisplayserver() {
