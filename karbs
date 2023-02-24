@@ -42,7 +42,9 @@ manualinstall() {
 	sudo -u "$username" mkdir -p "$repodir/$1"
 	sudo -u "$username" git clone "https://aur.archlinux.org/$1.git" "$repodir/$1"
 	cd "$repodir/$1" || exit 1
-	sudo -u "$username" "$repodir/$1"makepkg -si >/dev/null 2>&1 || return 1
+	sudo -u "$username" makepkg -si >/dev/null 2>&1 || return 1
+	cd "$homedir" || exit 1
+	rm -rf "${repodir:?}/$1"
 }
 
 installation() {
