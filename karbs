@@ -38,6 +38,7 @@ manualinstall() {
 	# Should be run after repodir is created and var is set.
 	pacman -Qq "$1" && return 0
 	pacman -S --noconfirm rust-src git wget fakeroot
+	rm -rf "${repodir:?}/$1"
 	sudo -u "$username" mkdir -p "$repodir/$1"
 	sudo -u "$username" git -C "$repodir" clone --depth 1 --single-branch \
 		--no-tags -q "https://aur.archlinux.org/$1.git" "$repodir/$1" ||
