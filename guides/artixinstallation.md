@@ -41,8 +41,8 @@
 
 ### Partition the disks
 
-Partition your hard drive with [cfdisk](https://man.archlinux.org/man/cfdisk.8).  
-It can be _sda_, _sdb_, _sdc_, _nvme0n1_ or other drive names.
+Partition your hard drive with [cfdisk](https://man.archlinux.org/man/cfdisk.8).\
+It can be *sda*, *sdb*, *sdc*, *nvme0n1* or other drive names.
 
 ```shell
 cfdisk /dev/sdx
@@ -52,10 +52,10 @@ Chose `dos` if available.
 
 #### Example layout
 
--   `boot` - 256M
--   `swap` - (optional, recommended size is the size of RAM or half of it)
--   `root` - 30GB (10GB for root in VM will be enough, but on physical hardware 30GB-50GB is recommended)
--   `home` - rest of the drive
+*   `boot` - 256M
+*   `swap` - (optional, recommended size is the size of RAM or half of it)
+*   `root` - 30GB (10GB for root in VM will be enough, but on physical hardware 30GB-50GB is recommended)
+*   `home` - rest of the drive
 
 ### Format the partitions
 
@@ -81,8 +81,8 @@ swapon /dev/sdx2
 
 #### Flag explanation
 
--   `-L, --label` - Mount the partition that has the specified label.
--   `-m, --mkdir` - Allow to make a target directory (mountpoint) if it does not exist yet.
+*   `-L, --label` - Mount the partition that has the specified label.
+*   `-m, --mkdir` - Allow to make a target directory (mountpoint) if it does not exist yet.
 
 Mount additional drives/partitions if exist and needed with:
 
@@ -166,20 +166,20 @@ LANG=en_US.UTF-8
 
 If you want to specify which time, number, etc. formats to use, you can do so using the following variables:
 
--   `LANG`
--   `LANGUAGE`
--   `LC_ADDRESS`
--   `LC_COLLATE`
--   `LC_CTYPE`
--   `LC_IDENTIFICATION`
--   `LC_MEASUREMENT`
--   `LC_MESSAGES`
--   `LC_MONETARY`
--   `LC_NAME`
--   `LC_NUMERIC`
--   `LC_PAPER`
--   `LC_TELEPHONE`
--   `LC_TIME`
+*   `LANG`
+*   `LANGUAGE`
+*   `LC_ADDRESS`
+*   `LC_COLLATE`
+*   `LC_CTYPE`
+*   `LC_IDENTIFICATION`
+*   `LC_MEASUREMENT`
+*   `LC_MESSAGES`
+*   `LC_MONETARY`
+*   `LC_NAME`
+*   `LC_NUMERIC`
+*   `LC_PAPER`
+*   `LC_TELEPHONE`
+*   `LC_TIME`
 
 For example:
 
@@ -247,7 +247,7 @@ passwd
 
 ### Add user(s)
 
-Create a regular user and password. Replace _username_ with your desired username.
+Create a regular user and password. Replace *username* with your desired username.
 
 ```shell
 useradd -mG username wheel
@@ -314,7 +314,7 @@ Read more about Artix Linux repositories [here](https://wiki.artixlinux.org/Main
 ### Network configuration
 
 Create the [hostname](https://wiki.archlinux.org/title/Network_configuration#Set_the_hostname) file and enter machine name.
-Replace _myhostname_ with a name that will be seen by other devices on the same network.
+Replace *myhostname* with a name that will be seen by other devices on the same network.
 
 ```shell
 vim /etc/hostname
