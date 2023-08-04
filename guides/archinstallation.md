@@ -67,10 +67,10 @@ Chose `dos` if available.
 ### Format the partitions
 
 ```shell
-mkfs.fat -F 32 /dev/sdx1            # boot partition
+mkfs.fat -F 32 /dev/sdx1           # boot partition
 fatlabel /dev/vda1 boot
 
-mkswap -L swap /dev/sdx2            # swap partition, if created
+mkswap -L swap /dev/sdx2           # swap partition, if created
 mkfs.ext4 -L root /dev/sdx3        # root partition
 mkfs.ext4 -L root /dev/sdx4        # home partition
 ```
@@ -298,7 +298,7 @@ Replace _myhostname_ with a name that will be seen by other devices on the same 
 vim /etc/hostname
 ```
 
-```
+```config
 myhostname
 ```
 
@@ -308,7 +308,7 @@ Add matching entries to hosts:
 vim /etc/hosts
 ```
 
-```
+```config
 127.0.0.1   localhost
 ::1         localhost
 127.0.1.1   myhostname.localdomain myhostname
